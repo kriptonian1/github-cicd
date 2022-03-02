@@ -6,7 +6,6 @@ on:
 
 jobs:
   auto-assign:
-    if: "{{ github.event.comment.body | contains('/assign') }}"
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
