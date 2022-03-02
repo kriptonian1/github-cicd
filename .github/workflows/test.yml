@@ -1,0 +1,12 @@
+name: Test
+on:
+  issue_comment:
+    created:
+      patterns:
+        - '/test @(.*)'
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Send message'
+        issue-message: 'Hello, @{{ github.event.issue_comment.user.login }}!'
