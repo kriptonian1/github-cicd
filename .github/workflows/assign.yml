@@ -1,8 +1,8 @@
 name: Assign
 
 on:
-  issues:
-    [issue_comment]
+  issue_comment:
+    types: [created]
 
 jobs:
   if: ${{ github.event.comment.body == "/assign"}}
