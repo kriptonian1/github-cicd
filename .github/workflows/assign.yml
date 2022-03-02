@@ -8,7 +8,7 @@ on:
 jobs:
   auto-assign:
     runs-on: ubuntu-latest
-    if: ${{ github.event.comment.body == 'assign' }}
+    if: ${{ github.event.comment.body == '/assign' }}
     steps:
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
