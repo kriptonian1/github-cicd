@@ -2,13 +2,12 @@ name: Assign
 on:
   issue_comment:
     created:
-      patterns:
-        - '/assign'
 
 jobs:
   auto-assign:
-  # Run this is the number of assignee is less than 2
-  # If the number of assignee is more than 2, it will be skipped
+    if:
+      - issue.body == "/assign"
+      - issue.assignees.total_count == 0
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
