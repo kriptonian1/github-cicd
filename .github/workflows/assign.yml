@@ -7,7 +7,7 @@ jobs:
   auto-assign:
     if:
       - issue.body == "/assign"
-      - issue.assignees.total_count == 0
+      # - issue.assignees.total_count == 0
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
