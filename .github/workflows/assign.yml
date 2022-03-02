@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  if: ${{ github.event.comment.body == "/assign"}}
+  if: github.event.comment.body == "/assign"
   auto-assign:
     runs-on: ubuntu-latest
     steps:
