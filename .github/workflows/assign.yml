@@ -5,7 +5,6 @@ on:
     types: [created]
 
 jobs:
-  if: 1 == 1
   auto-assign:
     runs-on: ubuntu-latest
     steps:
