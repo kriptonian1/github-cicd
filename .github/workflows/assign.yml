@@ -5,12 +5,12 @@ on:
     types: [created]
 
 jobs:
-  if: 1 == 1
   auto-assign:
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
+        if: 1 == 1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
