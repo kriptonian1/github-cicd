@@ -3,7 +3,7 @@ on:
   issue:
     comment:
       created:
-        if: "{{ github.event.comment.body }}" == "/assign"
+        - '/assign'
 
 jobs:
   auto-assign:
