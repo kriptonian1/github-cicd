@@ -1,7 +1,7 @@
 name: Assign
 on:
   issue_comment:
-    created:
+    [created]
 
 jobs:
   auto-assign:
