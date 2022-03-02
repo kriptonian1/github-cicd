@@ -1,0 +1,11 @@
+name: Assign
+on:
+  issue_comment:
+    [created]
+
+jobs:
+  test-print:
+    runs-on: ubuntu-latest
+    steps:
+      - id: print
+        run: echo "${{ github }}"
