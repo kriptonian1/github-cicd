@@ -9,7 +9,6 @@ jobs:
   auto-assign:
   # Run this is the number of assignee is less than 2
   # If the number of assignee is more than 2, it will be skipped
-    if: '{{ item.assignees | length < 2 }}'
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
@@ -17,5 +16,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
-      - name: 'Print'
-        run: echo "{{ item.assignees | length < 2 }}"
+          issue-message: ${{ github.event.issue.assigned }}
