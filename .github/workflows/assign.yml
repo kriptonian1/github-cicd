@@ -16,4 +16,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
-          issue-message: ${{ github.event.issue.assigned }}
+      run: echo ${{ github.event.issue.assigned }}
