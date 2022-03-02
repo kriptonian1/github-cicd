@@ -1,4 +1,4 @@
-name: Assign
+name: Test
 on:
   issue_comment:
     [created]
