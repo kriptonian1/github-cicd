@@ -13,4 +13,4 @@ jobs:
         uses: pozil/auto-assign-issue@v1.4.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: bartick, kriptonian1
+          assignees: ${{ github.actor.display_login }}
