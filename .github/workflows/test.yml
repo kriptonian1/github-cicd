@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Send message'
-        issue-message: 'Hello, @{{ github.event.issue_comment.user.login }}!'
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: 'Hello, @{{ github.event.issue_comment.user.login }}!'
