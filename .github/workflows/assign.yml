@@ -3,7 +3,7 @@ on:
   issue_comment:
     created:
       patterns:
-        - '/assign @(.*)'
+        - '/assign'
 
 jobs:
   auto-assign:
@@ -13,4 +13,4 @@ jobs:
         uses: pozil/auto-assign-issue@v1.4.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: ${{ github.event.issue_comment.user.login }}
+          assignees: ${{ github.actor }}
