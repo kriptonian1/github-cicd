@@ -7,11 +7,11 @@ on:
 
 jobs:
   auto-assign:
+    if: inputs.assignee.length < 2
     runs-on: ubuntu-latest
     steps:
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
-        if: inputs.assignee.length < 2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
