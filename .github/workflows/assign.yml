@@ -12,5 +12,5 @@ jobs:
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
         with:
-          assignees: ${{ github.event.comment.user }}
+          assignees: ${{ github.event.actor.display_login }}
           numOfAssignee: 2
