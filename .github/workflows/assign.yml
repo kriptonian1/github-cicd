@@ -11,9 +11,10 @@ jobs:
   # If the number of assignee is more than 2, it will be skipped
     runs-on: ubuntu-latest
     steps:
+      - id: print
+        run: echo "${{ github.event.issue.assigned }}"
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1.4.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
-      run: echo ${{ github.event.issue.assigned }}
