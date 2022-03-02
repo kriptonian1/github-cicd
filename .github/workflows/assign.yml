@@ -2,7 +2,7 @@ name: Assign
 on:
   issue_comment:
     created:
-      - '/assign'
+      body: /assign
 
 jobs:
   auto-assign:
