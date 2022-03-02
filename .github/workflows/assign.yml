@@ -1,9 +1,8 @@
 name: Assign
 on:
-  issue:
-    comment:
-      created:
-        - '/assign'
+  issue_comment:
+    created:
+      - '/assign'
 
 jobs:
   auto-assign:
