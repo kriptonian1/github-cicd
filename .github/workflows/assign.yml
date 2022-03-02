@@ -1,5 +1,9 @@
 name: Assign
-on: issue_comment
+
+on:
+  issue_comment:
+    type: created
+
 jobs:
   auto-assign:
     if: "{{ github.event.comment.body | contains('/assign') }}"
